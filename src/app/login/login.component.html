@@ -1,0 +1,41 @@
+<div class="login-container">
+  <img
+    class="film"
+    src="https://o.remove.bg/downloads/67fd72b4-8db7-4b50-8581-3654ad35efca/png-clipart-graphic-film-graphy-movie-camera-filmstrip-angle-material-removebg-preview.png"
+    alt=""
+  />
+  <div class="logo">Movie caffe</div>
+  <div class="description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellat
+    officiis sunt mollitia, libero nemo praesentium beatae voluptatibus tempore,
+    aperiam in nisi voluptate hic quibusdam, repudiandae doloremque illo
+    exercitationem? Facere? Lorem, ipsum dolor sit amet consectetur adipisicing
+    elit.
+  </div>
+  <div class="login-form">
+    <div class="formgroup">
+      <label for="uname">User Name</label>
+      <input
+        type="text"
+        name="uname"
+        class="form-control"
+        [(ngModel)]="username"
+      />
+    </div>
+    <div class="formgroup">
+      <label for="pass">password</label>
+      <input
+        type="password"
+        name="pass"
+        class="form-control"
+        [(ngModel)]="password"
+      />
+      <div class="btn-container">
+        <button id="button" class="btn btn-dark" (click)="login()">
+          Login
+        </button>
+        <div class="error">{{errorMsg}}</div>
+      </div>
+    </div>
+  </div>
+</div>

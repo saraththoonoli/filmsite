@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class="home-container">
+  <div class="all-movies">
+    <div class="trending-movies">
+      <div class="top">
+        <h4>trending-movies</h4>
+        <div class="view-all">View All</div>
+      </div>
+      <div class="movie-thumbnail">
+        <div class="movie" *ngFor="let movie of trendingmovies">
+          <div class="cover" (click)="goTomovie('trending', movie.id)">
+            <img width="150px" [src]="movie.cover" alt="movie.name" />
+          </div>
+          <div class="details">
+            <div class="name">{{ movie.name }}</div>
+            <div class="rating">Rating{{ movie.rating }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trending-movies">
+      <div class="tops">
+        <h4>Popular in Theatre</h4>
+        <div class="view-all">View All</div>
+      </div>
+      <div class="movie-thumbnail">
+        <div class="movie" *ngFor="let movie of Theatremovies">
+          <div class="cover"(click)="goTomovie('Theatre',movie.id)">
+            <img width="150px" [src]="movie.cover" alt="movie.name" />
+          </div>
+          <div class="details">
+            <div class="name">{{ movie.name }}</div>
+            <div class="rating">Rating{{ movie.rating }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending-movies">
+      <div class="tops">
+        <h4>Horrer Movies</h4>
+        <div class="view-all">View All</div>
+      </div>
+      <div class="movie-thumbnail">
+        <div class="movie" *ngFor="let movie of Theatremovies">
+          <div class="cover"(click)="goTomovie('Theatre',movie.id)">
+            <img width="150px" [src]="movie.cover" alt="movie.name" />
+          </div>
+          <div class="details">
+            <div class="name">{{ movie.name }}</div>
+            <div class="rating">Rating{{ movie.rating }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending-movies">
+      <div class="top">
+        <h4>trending-movies</h4>
+        <div class="view-all">View All</div>
+      </div>
+      <div class="movie-thumbnail">
+        <div class="movie" *ngFor="let movie of trendingmovies">
+          <div class="cover"(click)="goTomovie('trending',movie.id)">
+            <img width="150px" [src]="movie.cover" alt="movie.name" />
+          </div>
+          <div class="details">
+            <div class="name">{{ movie.name }}</div>
+            <div class="rating">Rating{{ movie.rating }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  <div class="popular-movies">
+    <h4>All Time Popular Movies</h4>
+    <div class="movie" *ngFor="let movie of popularmovies">
+      <div class="cover"(click)="goTomovie('Popular',movie.id)">
+        <img width="150px" [src]="movie.cover" alt="movie.name" />
+      </div>
+      <div class="details">
+        <div class="name">{{ movie.name }}</div>
+        <div class="rating">Rating{{ movie.rating }}</div>
+      </div>
+    </div>
+  </div>
+</div>
